@@ -1,0 +1,43 @@
+{
+    "name": "gourmet/social-meta"
+    , "description": "Adds Facebook Open Graph and Twitter Cards support to CakePHP 3."
+    , "type": "cakephp-plugin"
+    , "keywords": [
+        "cakephp"
+        , "gourmet"
+    ]
+    , "homepage": "https://github.com/gourmet/social-meta"
+    , "license": "MIT"
+    , "authors": [
+        {
+            "name": "Jad Bitar"
+            , "homepage": "http://jadb.io"
+            , "role": "Author"
+        }
+        , {
+            "name": "Others"
+            , "homepage": "https://github.com/gourmet/social-meta/graphs/contributors"
+        }
+    ]
+    , "support": {
+        "issues": "https://github.com/gourmet/social-meta/issues"
+        , "source": "https://github.com/gourmet/social-meta"
+    }
+    , "require": {
+        "cakephp/cakephp": "3.0.*-dev"
+        , "cakephp/plugin-installer": "*"
+    }
+    , "require-dev": {
+        "phpunit/phpunit": "4.1.*"
+    }
+    , "autoload": {
+        "psr-4": {
+            "Gourmet\\SocialMeta\\": "src"
+        }
+    }
+    , "autoload-dev": {
+        "psr-4": {
+            "Gourmet\\SocialMeta\\Test\\": "tests"
+        }
+    }
+}
