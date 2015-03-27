@@ -4,7 +4,7 @@
 [![Total Downloads](https://poser.pugx.org/gourmet/social-meta/downloads.svg)](https://packagist.org/packages/gourmet/social-meta)
 [![License](https://poser.pugx.org/gourmet/social-meta/license.svg)](https://packagist.org/packages/gourmet/social-meta)
 
-Adds [Facebook Open Graph][fbog] and [Twitter Cards][twcards] support to [CakePHP 3][cakephp].
+Adds [Facebook Open Graph][fbog] and [Twitter Cards][twcards] support to [CakePHP 3].
 
 ## What's included?
 
@@ -13,16 +13,11 @@ Adds [Facebook Open Graph][fbog] and [Twitter Cards][twcards] support to [CakePH
 
 ## Install
 
-Using [Composer][composer]:
+Using [Composer]:
 
 ```
-composer require gourmet/social-meta
+composer require gourmet/social-meta:dev-master
 ```
-
-Because this plugin has the type `cakephp-plugin` set in its own `composer.json`,
-[Composer][composer] will install it inside your /plugins directory, rather than
-in your `vendor-dir`. It is recommended that you add /plugins/gourmet to your
-`.gitignore` file and here's [why][composer:ignore].
 
 You then need to load the plugin. In `boostrap.php`, something like:
 
@@ -60,8 +55,8 @@ public $helpers = [
 
 You are now ready to use the helpers in your view.
 
-For the [Facebook OpenGraph][fbog], you will need to use the helper's `html()` method as it will include the defined
-namespaces:
+For the [Facebook OpenGraph][fbog], you will need to use the helper's `html()` method as it 
+will include the defined namespaces:
 
 ```php
 echo $this->OpenGraph->html();
@@ -118,11 +113,10 @@ http://github.com/gourmet/social-meta/issues
 
 ## License
 
-Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
+Copyright (c)2015, Jad Bitar and licensed under [The MIT License][mit].
 
-[cakephp]:http://cakephp.org
-[composer]:http://getcomposer.org
-[composer:ignore]:http://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md
+[CakePHP 3]:http://cakephp.org
+[Composer]:http://getcomposer.org
 [mit]:http://www.opensource.org/licenses/mit-license.php
 [fbog]:https://developers.facebook.com/docs/opengraph
 [twcards]:https://dev.twitter.com/cards/overview
