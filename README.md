@@ -16,7 +16,7 @@ Adds [Facebook Open Graph][fbog] and [Twitter Cards][twcards] support to [CakePH
 Using [Composer]:
 
 ```
-composer require gourmet/social-meta:dev-master
+composer require gourmet/social-meta:~1.0
 ```
 
 You then need to load the plugin. In `boostrap.php`, something like:
