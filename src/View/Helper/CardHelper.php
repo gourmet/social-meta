@@ -23,7 +23,7 @@ class CardHelper extends Helper
      * Constructor
      *
      * @param \Cake\View\View $View View instance.
-     * @param array $config
+     * @param array $config Config
      */
     public function __construct(View $View, array $config = [])
     {
@@ -40,7 +40,7 @@ class CardHelper extends Helper
      *
      * @param string $tag Tag name
      * @param string $value Tag value
-     * @param array $options
+     * @param array $options Options
      * @return $this
      */
     public function addTag($tag, $value, array $options = [])

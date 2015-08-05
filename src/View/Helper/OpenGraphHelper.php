@@ -64,6 +64,7 @@ class OpenGraphHelper extends Helper
      *
      * @param string $namespace Namespace
      * @param string|array $url URL
+     * @return $this
      */
     public function addNamespace($namespace, $url)
     {
@@ -78,10 +79,10 @@ class OpenGraphHelper extends Helper
     /**
      * Add tag
      *
-     * @param string $namepsace Namespace
+     * @param string $namespace Namespace
      * @param string $tag Tag name
      * @param string $value Tag value
-     * @param array $options
+     * @param array $options Options
      * @return $this
      */
     public function addTag($namespace, $tag, $value, array $options = [])
@@ -148,6 +149,7 @@ class OpenGraphHelper extends Helper
      * Set URL.
      *
      * @param string|array $value URL
+     * @param string $namespace Namespace. Defaults to "og"
      * @return $this
      */
     public function setUri($value, $namespace = 'og')
