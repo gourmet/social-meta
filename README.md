@@ -27,33 +27,34 @@ You then need to load the plugin. In `boostrap.php`, something like:
 
 ## Usage
 
-First, include the helpers in your `AppController`, specific `Controller` or `AppView`. Example in
-`AppController`:
+Include the helpers in your `AppView`:
 
 ```php
-public $helpers = [
-    'Gourmet\SocialMeta.Card',
-    'Gourmet\SocialMeta.OpenGraph'
-];
+public function initialize(array $config)
+{
+    $this->loadHelper('Gourmet\SocialMeta.Card');
+    $this->loadHelper('Gourmet\SocialMeta.OpenGraph');
+}
 ```
 
 Keep in mind that certain configuration option are made available to you. For example:
 
 ```php
-public $helpers = [
-    'Gourmet\SocialMeta.Card' => [
+public function initialize(array $config)
+{
+    $this->loadHelper('Gourmet\SocialMeta.Card', [
         'card' => 'photo',
         'tags' => ['twitter' => [
             'description' => 'Some default description'
         ]]
-    ],
-    'Gourmet\SocialMeta.OpenGraph' => [
+    ]);
+    $this->loadHelper('Gourmet\SocialMeta.OpenGraph', [
         'app_id' => 'xxx'
-    ]
-];
+    ]);
+}
 ```
 
-You are now ready to use the helpers in your view.
+You are now ready to use the helpers in your view / layout.
 
 For the [Facebook OpenGraph][fbog], you will need to use the helper's `html()` method as it
 will include the defined namespaces:
