@@ -1,8 +1,8 @@
 # Social Meta
 
-[![Build Status](https://travis-ci.org/gourmet/social-meta.svg?branch=master)](https://travis-ci.org/gourmet/social-meta)
-[![Total Downloads](https://poser.pugx.org/gourmet/social-meta/downloads.svg)](https://packagist.org/packages/gourmet/social-meta)
-[![License](https://poser.pugx.org/gourmet/social-meta/license.svg)](https://packagist.org/packages/gourmet/social-meta)
+[![Build Status](https://img.shields.io/travis/gourmet/social-meta/master.svg?style=flat-square)](https://travis-ci.org/gourmet/social-meta)
+[![Total Downloads](https://img.shields.io/packagist/dt/gourmet/social-meta.svg?style=flat-square)](https://packagist.org/packages/gourmet/social-meta)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE.txt)
 
 Adds [Facebook Open Graph][fbog] and [Twitter Cards][twcards] support to [CakePHP 3].
 
@@ -55,7 +55,7 @@ public $helpers = [
 
 You are now ready to use the helpers in your view.
 
-For the [Facebook OpenGraph][fbog], you will need to use the helper's `html()` method as it 
+For the [Facebook OpenGraph][fbog], you will need to use the helper's `html()` method as it
 will include the defined namespaces:
 
 ```php
