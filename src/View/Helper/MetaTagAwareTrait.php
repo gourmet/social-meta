@@ -4,11 +4,17 @@ namespace Gourmet\SocialMeta\View\Helper;
 
 trait MetaTagAwareTrait
 {
+
+    /**
+     * Render view block.
+     *
+     * @return string
+     */
     public function render()
     {
         $block = $this->config('viewBlockName');
 
-        foreach ((array) $this->config('tags') as $namespace => $values) {
+        foreach ((array)$this->config('tags') as $namespace => $values) {
             foreach ($values as $tag => $content) {
                 $property = "$namespace:$tag";
 

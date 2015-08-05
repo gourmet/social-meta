@@ -1,8 +1,8 @@
 # Social Meta
 
-[![Build Status](https://travis-ci.org/gourmet/social-meta.svg?branch=master)](https://travis-ci.org/gourmet/social-meta)
-[![Total Downloads](https://poser.pugx.org/gourmet/social-meta/downloads.svg)](https://packagist.org/packages/gourmet/social-meta)
-[![License](https://poser.pugx.org/gourmet/social-meta/license.svg)](https://packagist.org/packages/gourmet/social-meta)
+[![Build Status](https://img.shields.io/travis/gourmet/social-meta/master.svg?style=flat-square)](https://travis-ci.org/gourmet/social-meta)
+[![Total Downloads](https://img.shields.io/packagist/dt/gourmet/social-meta.svg?style=flat-square)](https://packagist.org/packages/gourmet/social-meta)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE.txt)
 
 Adds [Facebook Open Graph][fbog] and [Twitter Cards][twcards] support to [CakePHP 3].
 
@@ -27,35 +27,36 @@ You then need to load the plugin. In `boostrap.php`, something like:
 
 ## Usage
 
-First, include the helpers in your `AppController`, specific `Controller` or `AppView`. Example in
-`AppController`:
+Include the helpers in your `AppView`:
 
 ```php
-public $helpers = [
-    'Gourmet\SocialMeta.Card',
-    'Gourmet\SocialMeta.OpenGraph'
-];
+public function initialize(array $config)
+{
+    $this->loadHelper('Gourmet\SocialMeta.Card');
+    $this->loadHelper('Gourmet\SocialMeta.OpenGraph');
+}
 ```
 
 Keep in mind that certain configuration option are made available to you. For example:
 
 ```php
-public $helpers = [
-    'Gourmet\SocialMeta.Card' => [
+public function initialize(array $config)
+{
+    $this->loadHelper('Gourmet\SocialMeta.Card', [
         'card' => 'photo',
         'tags' => ['twitter' => [
             'description' => 'Some default description'
         ]]
-    ],
-    'Gourmet\SocialMeta.OpenGraph' => [
+    ]);
+    $this->loadHelper('Gourmet\SocialMeta.OpenGraph', [
         'app_id' => 'xxx'
-    ]
-];
+    ]);
+}
 ```
 
-You are now ready to use the helpers in your view.
+You are now ready to use the helpers in your view / layout.
 
-For the [Facebook OpenGraph][fbog], you will need to use the helper's `html()` method as it 
+For the [Facebook OpenGraph][fbog], you will need to use the helper's `html()` method as it
 will include the defined namespaces:
 
 ```php
