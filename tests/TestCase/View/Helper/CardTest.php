@@ -1,10 +1,10 @@
 <?php
 
-namespace Gourmet\SocialMeta\Test\TestCase\View\Helper;
+namespace Muffin\SocialMeta\Test\TestCase\View\Helper;
 
 use Cake\TestSuite\TestCase;
 use Cake\View\View;
-use Gourmet\SocialMeta\View\Helper\CardHelper;
+use Muffin\SocialMeta\View\Helper\CardHelper;
 
 class CardTest extends TestCase
 {
@@ -31,7 +31,7 @@ class CardTest extends TestCase
 
     public function testSetCard()
     {
-        $this->assertInstanceOf('Gourmet\SocialMeta\View\Helper\CardHelper', $this->Card->setCard('photo'));
+        $this->assertInstanceOf('Muffin\SocialMeta\View\Helper\CardHelper', $this->Card->setCard('photo'));
 
         $result = $this->Card->config('tags.twitter.card');
         $expected = 'photo';
@@ -41,16 +41,16 @@ class CardTest extends TestCase
     public function testSetUrl()
     {
         $url = ['controller' => 'pages', 'action' => 'display', 'home'];
-        $this->assertInstanceOf('Gourmet\SocialMeta\View\Helper\CardHelper', $this->Card->setUrl($url));
+        $this->assertInstanceOf('Muffin\SocialMeta\View\Helper\CardHelper', $this->Card->setUrl($url));
 
         $result = $this->Card->config('tags.twitter.url');
-        $expected = 'http://localhost/pages/display/home';
+        $expected = 'http://localhost/';
         $this->assertEquals($expected, $result);
     }
 
     public function testSetTitle()
     {
-        $this->assertInstanceOf('Gourmet\SocialMeta\View\Helper\CardHelper', $this->Card->setTitle('foo'));
+        $this->assertInstanceOf('Muffin\SocialMeta\View\Helper\CardHelper', $this->Card->setTitle('foo'));
 
         $result = $this->Card->config('tags.twitter.title');
         $expected = 'foo';
@@ -59,7 +59,7 @@ class CardTest extends TestCase
 
     public function testSetDescription()
     {
-        $this->assertInstanceOf('Gourmet\SocialMeta\View\Helper\CardHelper', $this->Card->setDescription('foo'));
+        $this->assertInstanceOf('Muffin\SocialMeta\View\Helper\CardHelper', $this->Card->setDescription('foo'));
 
         $result = $this->Card->config('tags.twitter.description');
         $expected = 'foo';
@@ -68,7 +68,7 @@ class CardTest extends TestCase
 
     public function testSetData1()
     {
-        $this->assertInstanceOf('Gourmet\SocialMeta\View\Helper\CardHelper', $this->Card->setData1('foo'));
+        $this->assertInstanceOf('Muffin\SocialMeta\View\Helper\CardHelper', $this->Card->setData1('foo'));
 
         $result = $this->Card->config('tags.twitter.data1');
         $expected = 'foo';
@@ -77,7 +77,7 @@ class CardTest extends TestCase
 
     public function testSetLabel1()
     {
-        $this->assertInstanceOf('Gourmet\SocialMeta\View\Helper\CardHelper', $this->Card->setLabel1('foo'));
+        $this->assertInstanceOf('Muffin\SocialMeta\View\Helper\CardHelper', $this->Card->setLabel1('foo'));
 
         $result = $this->Card->config('tags.twitter.label1');
         $expected = 'foo';
@@ -86,7 +86,7 @@ class CardTest extends TestCase
 
     public function testSetData2()
     {
-        $this->assertInstanceOf('Gourmet\SocialMeta\View\Helper\CardHelper', $this->Card->setData2('foo'));
+        $this->assertInstanceOf('Muffin\SocialMeta\View\Helper\CardHelper', $this->Card->setData2('foo'));
 
         $result = $this->Card->config('tags.twitter.data2');
         $expected = 'foo';
@@ -95,7 +95,7 @@ class CardTest extends TestCase
 
     public function testSetLabel2()
     {
-        $this->assertInstanceOf('Gourmet\SocialMeta\View\Helper\CardHelper', $this->Card->setLabel2('foo'));
+        $this->assertInstanceOf('Muffin\SocialMeta\View\Helper\CardHelper', $this->Card->setLabel2('foo'));
 
         $result = $this->Card->config('tags.twitter.label2');
         $expected = 'foo';
@@ -104,7 +104,7 @@ class CardTest extends TestCase
 
     public function testSetSite()
     {
-        $this->assertInstanceOf('Gourmet\SocialMeta\View\Helper\CardHelper', $this->Card->setSite('foobar', ['foo' => 'bar']));
+        $this->assertInstanceOf('Muffin\SocialMeta\View\Helper\CardHelper', $this->Card->setSite('foobar', ['foo' => 'bar']));
 
         $result = $this->Card->config('tags.twitter.site');
         $expected = ['foobar', ['foo' => 'bar']];
@@ -113,7 +113,7 @@ class CardTest extends TestCase
 
     public function testSetCreator()
     {
-        $this->assertInstanceOf('Gourmet\SocialMeta\View\Helper\CardHelper', $this->Card->setCreator('foobar', ['foo' => 'bar']));
+        $this->assertInstanceOf('Muffin\SocialMeta\View\Helper\CardHelper', $this->Card->setCreator('foobar', ['foo' => 'bar']));
 
         $result = $this->Card->config('tags.twitter.creator');
         $expected = ['foobar', ['foo' => 'bar']];
@@ -125,7 +125,7 @@ class CardTest extends TestCase
         $image = 'http://farm8.staticflickr.com/7334/11858349453_e3f18e5881_z.jpg';
         $height = '100px';
         $width = '50px';
-        $this->assertInstanceOf('Gourmet\SocialMeta\View\Helper\CardHelper', $this->Card->setImage($image, compact('height', 'width')));
+        $this->assertInstanceOf('Muffin\SocialMeta\View\Helper\CardHelper', $this->Card->setImage($image, compact('height', 'width')));
 
         $result = $this->Card->config('tags.twitter.image');
         $expected = [$image, compact('height', 'width')];
@@ -134,7 +134,7 @@ class CardTest extends TestCase
 
     public function testSetPlayer()
     {
-        $this->assertInstanceOf('Gourmet\SocialMeta\View\Helper\CardHelper', $this->Card->setPlayer('foobar', ['foo' => 'bar']));
+        $this->assertInstanceOf('Muffin\SocialMeta\View\Helper\CardHelper', $this->Card->setPlayer('foobar', ['foo' => 'bar']));
 
         $result = $this->Card->config('tags.twitter.player');
         $expected = ['foobar', ['foo' => 'bar']];

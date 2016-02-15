@@ -1,10 +1,10 @@
 <?php
 
-namespace Gourmet\SocialMeta\Test\TestCase\View\Helper;
+namespace Muffin\SocialMeta\Test\TestCase\View\Helper;
 
 use Cake\TestSuite\TestCase;
 use Cake\View\View;
-use Gourmet\SocialMeta\View\Helper\OpenGraphHelper;
+use Muffin\SocialMeta\View\Helper\OpenGraphHelper;
 
 class OpenGraphTest extends TestCase
 {

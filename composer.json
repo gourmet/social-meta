@@ -1,15 +1,17 @@
 {
-    "name": "gourmet/social-meta",
-    "description": "Adds Facebook Open Graph and Twitter Cards support to CakePHP 3.x",
+    "name": "muffin/social-meta",
+    "description": "Adds Facebook Open Graph and Twitter Cards support to CakePHP 3",
     "type": "cakephp-plugin",
     "keywords": [
         "cakephp",
-        "gourmet",
+        "muffin",
         "social",
         "facebook",
+        "og",
+        "open graph",
         "twitter"
     ],
-    "homepage": "https://github.com/gourmet/social-meta",
+    "homepage": "https://github.com/usemuffin/social-meta",
     "license": "MIT",
     "authors": [
         {
@@ -18,25 +20,36 @@
             "role": "Author"
         },
         {
+            "name": "ADmad",
+            "homepage": "https://github.com/ADmad",
+            "role": "Author"
+        },
+        {
             "name": "Others",
-            "homepage": "https://github.com/gourmet/social-meta/graphs/contributors"
+            "homepage": "https://github.com/usemuffin/social-meta/graphs/contributors"
         }
     ],
     "support": {
-        "issues": "https://github.com/gourmet/social-meta/issues",
-        "source": "https://github.com/gourmet/social-meta"
+        "issues": "https://github.com/usemuffin/social-meta/issues",
+        "source": "https://github.com/usemuffin/social-meta"
     },
-    "require": {
-        "cakephp/cakephp": "~3.0"
+    "require-dev": {
+        "cakephp/cakephp": "~3.0",
+        "phpunit/phpunit": "~5.0"
     },
     "autoload": {
         "psr-4": {
-            "Gourmet\\SocialMeta\\": "src"
+            "Muffin\\SocialMeta\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Gourmet\\SocialMeta\\Test\\": "tests"
+            "Muffin\\SocialMeta\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1.x-dev"
         }
     }
 }

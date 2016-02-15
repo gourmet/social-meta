@@ -1,6 +1,6 @@
 <?php
 
-namespace Gourmet\SocialMeta\View\Helper;
+namespace Muffin\SocialMeta\View\Helper;
 
 trait MetaTagAwareTrait
 {

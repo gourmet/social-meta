@@ -1,6 +1,6 @@
 <?php
 
-namespace Gourmet\SocialMeta\View\Helper;
+namespace Muffin\SocialMeta\View\Helper;
 
 use Cake\Routing\Router;
 use Cake\View\Helper;

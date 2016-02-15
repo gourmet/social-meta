@@ -1,8 +1,9 @@
 # Social Meta
 
-[![Build Status](https://img.shields.io/travis/gourmet/social-meta/master.svg?style=flat-square)](https://travis-ci.org/gourmet/social-meta)
-[![Total Downloads](https://img.shields.io/packagist/dt/gourmet/social-meta.svg?style=flat-square)](https://packagist.org/packages/gourmet/social-meta)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE.txt)
+[[![Build Status](https://img.shields.io/travis/UseMuffin/SocialMeta/master.svg?style=flat-square)](https://travis-ci.org/UseMuffin/{{pluginName}})
+[![Coverage](https://img.shields.io/codecov/c/github/UseMuffin/SocialMeta.svg?style=flat-square)](https://codecov.io/github/UseMuffin/{{pluginName}})
+[![Total Downloads](https://img.shields.io/packagist/dt/muffin/social-meta.svg?style=flat-square)](https://packagist.org/packages/muffin/social-meta)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 
 Adds [Facebook Open Graph][fbog] and [Twitter Cards][twcards] support to [CakePHP 3].
 
@@ -16,13 +17,13 @@ Adds [Facebook Open Graph][fbog] and [Twitter Cards][twcards] support to [CakePH
 Using [Composer]:
 
 ```
-composer require gourmet/social-meta:~1.0
+composer require muffin/social-meta:~1.0
 ```
 
 You then need to load the plugin. In `boostrap.php`, something like:
 
 ```php
-\Cake\Core\Plugin::load('Gourmet/SocialMeta');
+\Cake\Core\Plugin::load('Muffin/SocialMeta');
 ```
 
 ## Usage
@@ -32,8 +33,8 @@ Include the helpers in your `AppView`:
 ```php
 public function initialize(array $config)
 {
-    $this->loadHelper('Gourmet\SocialMeta.Card');
-    $this->loadHelper('Gourmet\SocialMeta.OpenGraph');
+    $this->loadHelper('Muffin\SocialMeta.Card');
+    $this->loadHelper('Muffin\SocialMeta.OpenGraph');
 }
 ```
 
@@ -42,13 +43,13 @@ Keep in mind that certain configuration option are made available to you. For ex
 ```php
 public function initialize(array $config)
 {
-    $this->loadHelper('Gourmet\SocialMeta.Card', [
+    $this->loadHelper('Muffin\SocialMeta.Card', [
         'card' => 'photo',
         'tags' => ['twitter' => [
             'description' => 'Some default description'
         ]]
     ]);
-    $this->loadHelper('Gourmet\SocialMeta.OpenGraph', [
+    $this->loadHelper('Muffin\SocialMeta.OpenGraph', [
         'app_id' => 'xxx'
     ]);
 }
@@ -110,11 +111,11 @@ their own that I can ignore when I pull)
 
 ## Bugs & Feedback
 
-http://github.com/gourmet/social-meta/issues
+http://github.com/usemuffin/social-meta/issues
 
 ## License
 
-Copyright (c)2015, Jad Bitar and licensed under [The MIT License][mit].
+Copyright (c) 2015, [Use Muffin][muffin] and licensed under [The MIT License][mit].
 
 [CakePHP 3]:http://cakephp.org
 [Composer]:http://getcomposer.org
