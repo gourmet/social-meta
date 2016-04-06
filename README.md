@@ -32,8 +32,8 @@ Include the helpers in your `AppView`:
 ```php
 public function initialize(array $config)
 {
-    $this->loadHelper('Gourmet\SocialMeta.Card');
-    $this->loadHelper('Gourmet\SocialMeta.OpenGraph');
+    $this->loadHelper('Gourmet/SocialMeta.Card');
+    $this->loadHelper('Gourmet/SocialMeta.OpenGraph');
 }
 ```
 
@@ -42,13 +42,13 @@ Keep in mind that certain configuration option are made available to you. For ex
 ```php
 public function initialize(array $config)
 {
-    $this->loadHelper('Gourmet\SocialMeta.Card', [
+    $this->loadHelper('Gourmet/SocialMeta.Card', [
         'card' => 'photo',
         'tags' => ['twitter' => [
             'description' => 'Some default description'
         ]]
     ]);
-    $this->loadHelper('Gourmet\SocialMeta.OpenGraph', [
+    $this->loadHelper('Gourmet/SocialMeta.OpenGraph', [
         'app_id' => 'xxx'
     ]);
 }
