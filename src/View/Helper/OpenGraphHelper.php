@@ -184,6 +184,7 @@ class OpenGraphHelper extends Helper
                 return $this->addTag($namespace, $tag, $value);
 
             case 'image':
+            case 'logo':
             case 'video':
                 if (count($args) < 2) {
                     $args[] = [];
